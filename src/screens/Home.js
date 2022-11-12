@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import SideBar from '../components/SideBar';
 
-const Home = (props) => {
-    return(<div>
-        
-    </div>)
+export const Home = (props) => {
+    return(
+        <div>
+            <SideBar/>
+        </div>
+    )
 }
-
-export default Home;
