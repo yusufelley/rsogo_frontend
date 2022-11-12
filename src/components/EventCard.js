@@ -28,19 +28,19 @@ function EventCard(props) {
         <MdOutlineLocationOn style={icon} size={ICON_SIZE + 4} />
         <p style={iconText}>Campus Center</p>
       </div>
-      <img src={img} style={{height:"36vh",width:"68vw", alignSelf:"center", marginBottom: 5}} alt="msaFlyer"></img>
+      <img src={img} style={{height:"36vh", width:"64vw", alignSelf:"center", marginBottom: 5}} alt="msaFlyer"></img>
       <div
         align="center"
         style={{
           display: "flex",
           width: "100%",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
         }}
       >
-        <RiQuestionnaireLine size={"40px"}></RiQuestionnaireLine>
+        <RiQuestionnaireLine size={"30px"}></RiQuestionnaireLine>
         <div>
-          <BsCalendarPlus size={"35px"}></BsCalendarPlus>
-          <Button className="btn-dark" style={buttonStyle}>
+          <BsCalendarPlus size={"25px"}></BsCalendarPlus>
+          <Button className="btn-dark btn-sm" style={buttonStyle}>
             RSVP
           </Button>
         </div>
@@ -52,19 +52,21 @@ function EventCard(props) {
 const containerStyle = {
   display:"flex",
   flexDirection: "column",
-  width: "80vw",
+  width: "70vw",
   height: "50vh",
   background: "White",
   borderRadius: 15,
   position: "relative",
-  left: "5wv",
+  left: "5vw",
   top: "5vh",
+  padding: "10px"
 };
 
 const buttonStyle = {
   color: "White",
   fontWeight: "bold",
-  borderRadius: "18px 5px 18px 18px",
+  borderRadius: "18px 3px 18px 18px",
+  marginLeft: "10px",
 };
 
 // export const icons = ({text,icon}) => {
