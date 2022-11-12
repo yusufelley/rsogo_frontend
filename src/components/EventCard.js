@@ -11,7 +11,12 @@ const ICON_SIZE = 20;
 
 function EventCard(props) {
   const img = props.img
-  return (
+  const titleText = props.title
+  const time = props.time
+  const date = props.date
+  const location = props.location
+
+  return ( 
     <div style={containerStyle} className="shadow">
       <div style={title}>Welcome Back!</div>
       <div style={keyDetails}>
