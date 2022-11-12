@@ -6,4 +6,4 @@ const SideBar = (props) => {
     </div>)
 }
 
-export default CounterButton;
+export default SideBar;
