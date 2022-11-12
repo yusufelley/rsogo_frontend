@@ -11,7 +11,7 @@ function HomeCard(props){
 
     return (
         <div className="container">
-            <img src={img} alt="msa"></img>
+            <img className="club-img"src={img} alt="club-img"></img>
             <div className="flex1">
                 <Card className="card" 
                     bg={bg}  

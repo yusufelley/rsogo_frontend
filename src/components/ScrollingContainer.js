@@ -1,7 +1,8 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
+import HomeCard from "./HomeCard/HomeCard";
 
-export const ScrollingContainer = ({ children }) => {
+export const ScrollingContainer = ({cardData}) => {
+  console.log(typeof cardData)
   return (
     <div>
       <div
@@ -14,7 +15,7 @@ export const ScrollingContainer = ({ children }) => {
         }}
         className="overflow-scroll"
       >
-        {children}
+        {cardData.map((card) => <HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/>)}
       </div>
     </div>
   );
