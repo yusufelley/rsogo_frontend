@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import "../App.css"
 
 const SideBar = (props) => {
     return(
-        <div classname = "SideBar">
+        <div className = "SideBar">
             
         </div>
     )
