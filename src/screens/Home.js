@@ -48,7 +48,5 @@ export const Home = (props) => {
         </div>
     )
 
-    const homeStyle = {
-        flexDirection: Row
-    }
+    
 }
