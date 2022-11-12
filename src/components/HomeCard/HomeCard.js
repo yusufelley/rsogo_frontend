@@ -4,7 +4,7 @@ import "./HomeCard.css"
 
 function HomeCard(props){
     const bg = props.bg
-    const txtColor = props.textColor
+    const txtColor = props.txtColor
     const img = props.img
     const text = props.text
     const time = props.time
