@@ -8,3 +8,5 @@ function HomeCard(props){
         </div>
     );
 }
+
+export default HomeCard;
