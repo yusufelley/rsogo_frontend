@@ -28,15 +28,8 @@ function EventCard(props) {
         <MdOutlineLocationOn style={icon} size={ICON_SIZE + 4} />
         <p style={iconText}>Campus Center</p>
       </div>
-      <img src={img} style={{height:"36vh", width:"64vw", alignSelf:"center", marginBottom: 5}} alt="msaFlyer"></img>
-      <div
-        align="center"
-        style={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "space-between",
-        }}
-      >
+      <img src={img} style={image} alt="msaFlyer"></img>
+      <div align="center" style={bottomBar}>
         <RiQuestionnaireLine size={"30px"}></RiQuestionnaireLine>
         <div>
           <BsCalendarPlus size={"25px"}></BsCalendarPlus>
@@ -53,7 +46,7 @@ const containerStyle = {
   display:"flex",
   flexDirection: "column",
   width: "70vw",
-  height: "50vh",
+  height: "52vh",
   background: "White",
   borderRadius: 15,
   position: "relative",
@@ -83,6 +76,7 @@ const buttonStyle = {
 const title = {
   fontSize: 15,
   marginLeft: 5,
+  marginBottom: 5
 };
 
 const keyDetails = {
@@ -101,5 +95,19 @@ const iconText = {
 };
 const icon = {
   marginLeft: 0
+};
+const bottomBar = {
+  display: "flex",
+  width: "100%",
+  justifyContent: "space-between",
+};
+const image = {
+  height:"36vh", 
+  width:"64vw", 
+  alignSelf:"center", 
+  marginBottom: 5, 
+  marginTop: 5
 }
+
+
 export default EventCard;
