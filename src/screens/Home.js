@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
-const Home = (props) => {
+export const Home = (props) => {
     return(<div>
         
     </div>)
 }
-
-export default Home;
