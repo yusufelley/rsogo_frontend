@@ -1,12 +1,26 @@
 import React, { useState } from "react";
-import "../App.css"
+import { AiFillHome } from "react-icons/ai" 
 
 const SideBar = (props) => {
     return(
-        <div className = "SideBar">
+        <>  
+            <div style={sidebarStyle}>
+                <AiFillHome style={homeButton}/>
+            </div>
             
-        </div>
+        </>
     )
+}
+
+const sidebarStyle = {
+    height: "100vh",
+    width: "15vw",
+    background: 'maroon'
+}
+
+const homeButton = {
+    height: "5vh",
+    width: "7vh",
 }
 
 export default SideBar;

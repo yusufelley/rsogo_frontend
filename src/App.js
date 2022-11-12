@@ -9,8 +9,8 @@ import { Home } from './screens/Home';
 function App() {
   return (
     <div className="App">
+      <div> <Home/> </div>
       <EventContainer/>
-      <Home/>
     </div>
   );
 }
