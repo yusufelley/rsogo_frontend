@@ -1,6 +1,7 @@
 .container{
     display: flex;
     align-items: flex-start;
+    width: 85%;
 }
 
 img{
@@ -27,4 +28,7 @@ img{
 .text-container{
     display: flex;
     justify-content: space-between;
+    height: 40px;
+    padding-top: 8px
 }
+

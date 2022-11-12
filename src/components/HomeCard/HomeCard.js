@@ -19,7 +19,7 @@ function HomeCard(props){
                 >
                     <Card.Body className="text-container">
                         <Card.Text className="mt-0">{text}</Card.Text>
-                        {/*<Card.Text className="mt-0">{time}</Card.Text>*/}
+                        <Card.Text className="mt-0">{time}</Card.Text>
                     </Card.Body>
                 </Card>
             </div>
