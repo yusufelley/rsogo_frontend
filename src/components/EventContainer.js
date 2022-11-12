@@ -2,7 +2,7 @@ import React from 'react'
 
 function EventContainer(props) {
   return (
-    <div style={containerStyle} >
+    <div style={containerStyle} className="shadow">
         <div>
             Welcome Back
         </div>
