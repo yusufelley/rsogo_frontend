@@ -10,7 +10,9 @@ import EventContainer from './components/EventCard';
 function App() {
   return (
     <div className="App">
-      <Home />
+      <HomeCard bg="danger" textColor="white" img={msa} text="MSA Welcome Back" time="10:00pm"></HomeCard>
+      <Home/>
+      <EventCard/>
     </div>
   );
 }

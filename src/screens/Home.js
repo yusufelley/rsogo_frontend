@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Row } from "react-bootstrap";
 import { ScrollingContainer } from "../components/ScrollingContainer";
-import SideBar from '../components/SideBar';
+import SideBar from '../components/SideBar/SideBar';
 import msa from '../assets/msa.png'
 
 export const Home = (props) => {
@@ -46,4 +47,8 @@ export const Home = (props) => {
             <ScrollingContainer cardData={cards}></ScrollingContainer>
         </div>
     )
+
+    const homeStyle = {
+        flexDirection: Row
+    }
 }
