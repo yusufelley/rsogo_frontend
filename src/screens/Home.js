@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Row } from "react-bootstrap";
 import { ScrollingContainer } from "../components/ScrollingContainer";
-import SideBar from '../components/SideBar/SideBar';
+import SideBar from '../components/SideBar';
 import msa from '../assets/msa.png'
 
 export const Home = (props) => {
