@@ -11,6 +11,9 @@ function EventContainer(props) {
   )
 }
 
+const title = {
+    
+}
 const containerStyle = { 
     width: "60vw",
     height: "40vh",

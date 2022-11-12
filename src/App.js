@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import  EventContainer from './components/EventContainer'
+import  EventCard from './components/EventCard'
 import { Home } from './screens/Home';
 
 function App() {
