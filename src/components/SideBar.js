@@ -1,13 +1,14 @@
+import { Button } from "bootstrap";
 import React, { useState } from "react";
+import { View, TouchableHighlight } from "react";
 import { AiFillHome } from "react-icons/ai" 
 
 const SideBar = (props) => {
     return(
         <>  
             <div style={sidebarStyle}>
-                <AiFillHome style={homeButton}/>
+                
             </div>
-            
         </>
     )
 }
@@ -15,7 +16,8 @@ const SideBar = (props) => {
 const sidebarStyle = {
     height: "100vh",
     width: "15vw",
-    background: 'maroon'
+    background: 'maroon',
+    flexDirection: "column"
 }
 
 const homeButton = {
