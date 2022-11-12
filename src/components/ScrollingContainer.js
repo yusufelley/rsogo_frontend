@@ -2,20 +2,17 @@ import React from "react";
 import HomeCard from "./HomeCard/HomeCard";
 
 export const ScrollingContainer = ({cardData}) => {
-  console.log(typeof cardData)
   return (
     <div>
       <div
         style={{
-          backgroundColor: "#d1d5db",
-          width: "80vw", // remove
-          height: "95vh", // remove
-          marginTop: "5vh", // remove
-          marginLeft: "20vw", // remove
+          backgroundColor: "#e7e7e7",
+          width: "100vw", // remove
+          height: "100vh", // remove
         }}
         className="overflow-scroll"
       >
-        {cardData.map((card) => <HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/>)}
+        {cardData.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
       </div>
     </div>
   );
