@@ -1,6 +1,5 @@
 //import "./SideBar.css"
 import { AiFillHome } from "react-icons/ai"
-//import Button from 'react-bootstrap/Button' 
 import React from 'react';
 
 const SideBar = (props) => {

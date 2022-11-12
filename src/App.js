@@ -11,7 +11,8 @@ import { Home } from './screens/Home';
 function App() {
   return (
     <div className="App" style={{backgroundColor:"#f9fafbff"}}>
-      <EventCard img = {testFlyer}></EventCard>
+      {/* <EventCard img = {testFlyer}></EventCard> */}
+      <Home/>
     </div>
   );
 }
