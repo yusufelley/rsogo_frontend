@@ -28,7 +28,7 @@ function EventCard(props) {
         <MdOutlineLocationOn style={icon} size={ICON_SIZE + 4} />
         <p style={iconText}>Campus Center</p>
       </div>
-      <img src={img} alt="msaFlyer"></img>
+      <img src={img} style={{height:"27vh",width:"45vw", alignSelf:"center", marginBottom: 5}} alt="msaFlyer"></img>
       <div
         align="center"
         style={{
@@ -50,7 +50,9 @@ function EventCard(props) {
 }
 
 const containerStyle = {
-  width: "60vw",
+  display:"flex",
+  flexDirection: "column",
+  width: "50vw",
   height: "40vh",
   background: "White",
   borderRadius: 15,

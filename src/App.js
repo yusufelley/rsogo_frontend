@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <EventCard img={msaFlyer}/>
-      <HomeCard bg="danger" textColor="white" img={msa} text="MSA Welcome Back" time="10:00pm"></HomeCard>
-      <Home/>
+      {/* <HomeCard bg="danger" textColor="white" img={msa} text="MSA Welcome Back" time="10:00pm"></HomeCard> */}
+      {/* <Home/> */}
     </div>
   );
 }
