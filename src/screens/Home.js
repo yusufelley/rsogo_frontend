@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import SideBar from '../components/SideBar';
+import { Row } from "react-bootstrap";
+import SideBar from '../components/SideBar/SideBar';
 
 export const Home = (props) => {
     return(
@@ -7,4 +8,8 @@ export const Home = (props) => {
             <SideBar/>
         </div>
     )
+
+    const homeStyle = {
+        flexDirection: Row
+    }
 }
