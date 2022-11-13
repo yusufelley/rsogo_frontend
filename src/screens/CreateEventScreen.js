@@ -30,6 +30,7 @@ const FormTextBox = ({ handleTextChange, label, propName, multiline }) => {
 
 export const CreateEventScreen = ({ toggleCreateEvent }) => {
   const initialEventDetails = {
+    rso: undefined,
     name: undefined,
     date: undefined,
     time: undefined,
@@ -38,7 +39,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
     details: undefined,
   };
   const [dateTimeMoment, setDateTimeMoment] = useState(moment());
-  const [eventDetials, setEventDetails] = useState(initialEventDetails);
+  const [eventDetails, setEventDetails] = useState(initialEventDetails);
 
   const handleDateTimeChange = (dateTime) => {
     setDateTimeMoment(dateTime);
@@ -53,7 +54,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
     setEventDetails((prev) => ({ ...prev, [propName]: event.target.value }));
   };
 
-  console.log("Event Detials:", eventDetials);
+  console.log("Event Details:", eventDetails);
 
   return (
     <div
@@ -144,7 +145,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
                   headers: {
                     "Content-Type": "application/json",
                   },
-                  body: JSON.stringify(eventDetials),
+                  body: JSON.stringify(eventDetails),
                 });
               }}
               style={{ marginTop: "1rem" }}
