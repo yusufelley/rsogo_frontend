@@ -34,11 +34,11 @@ function EventCard({
         <div style={keyDetails}>
           <div style={iconContainer}>
             <AiOutlineClockCircle size={ICON_SIZE} />
-            <p style={iconText}>{moment(date).format("MM/DD/YYYY")}</p>
+            <p style={iconText}>{moment(date).format("hh:mm A")}</p>
           </div>
           <div style={iconContainer}>
             <FaRegCalendarAlt size={ICON_SIZE} />
-            <p style={iconText}>{moment(date).format("hh:mm A")}</p>
+            <p style={iconText}>{moment(date).format("MM/DD/YYYY")}</p>
           </div>
         </div>
         <div style={iconContainer}>
