@@ -7,12 +7,14 @@ import msaFlyer from './assets/flyer.jpg'
 import testFlyer from './assets/flyer2.png'
 import  EventCard from './components/EventCard'
 import { Home } from './screens/Home';
+import OneRSO from './screens/OneRSO';
 
 function App() {
   return (
     <div className="App" style={{backgroundColor:"#f9fafbff"}}>
+      <OneRSO/>
       {/* <EventCard img = {testFlyer}></EventCard> */}
-      <Home/>
+      {/* <Home/> */}
     </div>
   );
 }
