@@ -5,7 +5,10 @@ import { ScrollingContainer } from "../components/ScrollingContainer";
 import "./OneRSO.css";
 import About from "../components/About/About"
 
-function OneRSO() {
+function OneRSO(props) {
+  const currCard = props.currCard;
+  const setCard = props.setCard;
+
   const eventCards = [
     {
       image: testFlyer,
@@ -63,6 +66,7 @@ function OneRSO() {
       date: "12/1/22",
       location: "ILC",
     },
+
   ];
   return (
     <div>
