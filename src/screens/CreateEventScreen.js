@@ -145,7 +145,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
                   headers: {
                     "Content-Type": "application/json",
                   },
-                  body: JSON.stringify(eventDetials),
+                  body: JSON.stringify(eventDetails),
                 });
               }}
               style={{ marginTop: "1rem" }}
