@@ -13,7 +13,8 @@ export const DayContainer = ({ day, cardData, id }) => {
       {cardData.map((card) => (
         <div
           style={{
-            marginBottom: "50px",
+            marginTop: "10px",
+            marginBottom: "20px",
             fontFamily: "Montserrat",
             fontWeight: "700",
             fontSize: "24px",

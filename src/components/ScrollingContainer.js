@@ -41,7 +41,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
         className="overflow-scroll"
       >
         {showHome ? (
-          <div>
+          <div style={{marginTop:5,}}>
             {nextSevenDays.map((day) => (
               <DayContainer day={day.date} id={day.id} cardData={day.events} />
             ))}
