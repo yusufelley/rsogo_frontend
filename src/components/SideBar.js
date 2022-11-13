@@ -8,7 +8,8 @@ const SideBar = (props) => {
         <div style = {sidebarStyle}>
             <button style = {homeButton}>
                 <AiFillHome style = {iconStyle}/>
-                <hr
+            </button>
+            <hr
                     style={{
                         background: 'white',
                         color: 'white',
@@ -17,7 +18,6 @@ const SideBar = (props) => {
                         transparency: "0"
                     }}
                 />
-            </button>
             {/* <Pressable style = {homeButton} onPress={console.log("Pressed")}>
                 <AiFillHome/>
             </Pressable>  */}
