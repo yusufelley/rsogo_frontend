@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { Row } from "react-bootstrap";
 import { ScrollingContainer } from "../components/ScrollingContainer";
 import SideBar from "../components/SideBar/SideBar";
+
 import msa from "../assets/msa.png";
+import smash from "../assets/umass-smashbros.png";
+import hockey from "../assets/umass-hockey.jpg";
+import acm from "../assets/umass-acm.png";
+import archery from "../assets/umass-archery.jpg";
+
 import logo from "../assets/RSOlogo.png";
 import "./Home.css";
 import moment from "moment";
