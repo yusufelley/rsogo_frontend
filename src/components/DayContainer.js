@@ -11,7 +11,14 @@ export const DayContainer = ({ day, cardData, id }) => {
     <div class="day" style={{ marginBottom: "0px" }}>
       {`${day}`}
       {cardData.map((card) => (
-        <div style={{ marginBottom: "20px" }}>
+        <div
+          style={{
+            marginBottom: "50px",
+            fontFamily: "Montserrat",
+            fontWeight: "700",
+            fontSize: "24px",
+          }}
+        >
           <HomeCard
             bg={card.bg}
             txtColor={card.txtColor}
