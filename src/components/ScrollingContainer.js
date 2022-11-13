@@ -8,7 +8,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
     <div>
       <div
         style={{
-          backgroundColor: "#e7e7e7",
+          backgroundColor: "#E9E3E3",
           width: "85vw", // remove
           height: "100vh", // remove
           padding: "12px",
@@ -61,13 +61,13 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
               <HomeCard
                 bg={card.bg}
                 txtColor={card.txtColor}
-                img={card.img}
+                img={card.image}
                 text={card.text}
                 time={card.time}
               />
             ) : (
               <EventCard
-                img={card.img}
+                img={card.image}
                 title={card.text}
                 time={card.time}
                 date={card.date}

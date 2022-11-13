@@ -30,7 +30,7 @@ const sidebarStyle = {
   // width: "15vw",
   display: "inline-block",
   width: "15vw",
-  background: "maroon",
+  background: "#FF325C",
   flexDirection: "column",
 };
 
@@ -44,7 +44,7 @@ const homeButton = {
   height: "6vh",
   width: "15vw",
   color: "white",
-  backgroundColor: "maroon",
+  backgroundColor: "#FF325C",
   borderColor: "transparent",
 };
 
