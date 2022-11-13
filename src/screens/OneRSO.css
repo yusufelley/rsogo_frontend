@@ -8,3 +8,16 @@
     display: flex;
     flex-direction: row;
 }
+
+.one-RSO-header {
+    display: flex;
+}
+
+.club-name-header {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 40px;
+    top: 0;
+    bottom: 0;
+    font-size: 40px;
+}

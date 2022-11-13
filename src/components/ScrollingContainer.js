@@ -152,28 +152,6 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
           ))
         )}
       </div>
-
-      {/*cardData.map((card) => (
-          <div style={{ marginBottom: "20px" }}>
-            {showHome ? (
-              <HomeCard
-                bg={card.bg}
-                txtColor={card.txtColor}
-                img={card.image}
-                text={card.text}
-                time={card.time}
-              />
-            ) : (
-              <FlippableCard
-                img={card.image}
-                title={card.text}
-                time={card.time}
-                date={card.date}
-                location={card.location}
-              />
-            )}
-          </div>
-            ))}*/}
     </div>
   );
 };
