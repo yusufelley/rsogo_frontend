@@ -21,7 +21,7 @@ import { CreateButton } from "./components/CreateButton";
 import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
-  const [showHome, setShowHome] = useState(true);
+  const [showHome, setShowHome] = useState(false);
   const [showCreateEvent, setShowCreateEvent] = useState(false);
   const [currCard, setCard] = useState(null);
 
@@ -30,11 +30,10 @@ function App() {
   };
   const RSOs = [
     { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
+    { img: smash },
+    { img: acm },
+    { img: hockey },
+    { img: archery }
   ];
   console.log(showCreateEvent);
   return (
