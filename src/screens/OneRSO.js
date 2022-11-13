@@ -2,6 +2,10 @@ import React from "react";
 import EventCard from "../components/EventCard";
 import testFlyer from "../assets/flyer2.png";
 import { ScrollingContainer } from "../components/ScrollingContainer";
+import EventCard from "../components/EventCard";
+import testFlyer from "../assets/flyer2.png";
+import "./OneRSO.css";
+
 function OneRSO() {
   const eventCards = [
     {
