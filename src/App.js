@@ -15,7 +15,12 @@ import { CreateButton } from "./components/CreateButton";
 import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
-  const [showHome, setShowHome] = useState(true);
+  const [showHome, setShowHome] = useState(false);
+  const [showCreateEvent, setShowCreateEvent] = useState(false);
+
+  const toggleCreateEvent = () => {
+    setShowCreateEvent((prev) => !prev);
+  };
   const RSOs = [
     { img: msa },
     { img: msa },
@@ -24,12 +29,18 @@ function App() {
     { img: msa },
     { img: msa },
   ];
+  console.log(showCreateEvent);
   return (
     <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
-      <CreateButton />
+      {showCreateEvent ? (
+        <CreateEventScreen toggleCreateEvent={toggleCreateEvent} />
+      ) : (
+        <>
+          <CreateButton handleClick={toggleCreateEvent} />
+        </>
+      )}
       <SideBar rsoData={RSOs} />
       {showHome ? <Home /> : <OneRSO />}
-      <CreateEventScreen></CreateEventScreen>
     </div>
   );
 }

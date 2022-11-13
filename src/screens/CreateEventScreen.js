@@ -28,8 +28,9 @@ const FormTextBox = ({ handleTextChange, label, propName, multiline }) => {
   );
 };
 
-export const CreateEventScreen = () => {
+export const CreateEventScreen = ({ toggleCreateEvent }) => {
   const initialEventDetails = {
+    rso: undefined,
     name: undefined,
     date: undefined,
     time: undefined,
@@ -58,56 +59,114 @@ export const CreateEventScreen = () => {
   return (
     <div
       style={{
-        backgroundColor: "#EEE",
-        width: "10",
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
         alignItems: "center",
-        padding: "1rem",
       }}
     >
-      <div>Event Creation</div>
-      <FormTextBox
-        label="Name"
-        propName="name"
-        handleTextChange={handleTextChange}
-      />
-      <FormTextBox
-        label="Date"
-        propName="date"
-        handleTextChange={handleTextChange}
-      />
-      <FormTextBox
-        label="Time"
-        propName="time"
-        handleTextChange={handleTextChange}
-      />
-      <FormTextBox
-        label="Location"
-        propName="location"
-        handleTextChange={handleTextChange}
-      />
-      <FormTextBox
-        label="Details"
-        propName="details"
-        handleTextChange={handleTextChange}
-        multiline
-      />
-      <Button
-        onClick={() => {
-          fetch("http://localhost:3001/CreateEvent", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(eventDetials),
-          });
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100vw",
+          zIndex: 20,
+          position: "absolute",
         }}
-        style={{ marginTop: "1rem" }}
       >
-        Create
-      </Button>
+        <div
+          style={{
+            backgroundColor: "#EEE",
+            display: "flex",
+            height: "50vh",
+            width: "80vw",
+            borderRadius: "1rem",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "1rem",
+          }}
+          className="shadow"
+        >
+          <div>Event Creation</div>
+          <FormTextBox
+            label="RSO"
+            propName="rso"
+            handleTextChange={handleTextChange}
+          />
+          <FormTextBox
+            label="Name"
+            propName="name"
+            handleTextChange={handleTextChange}
+          />
+          <FormTextBox
+            label="Date"
+            propName="date"
+            handleTextChange={handleTextChange}
+          />
+          <FormTextBox
+            label="Time"
+            propName="time"
+            handleTextChange={handleTextChange}
+          />
+          <FormTextBox
+            label="Location"
+            propName="location"
+            handleTextChange={handleTextChange}
+          />
+
+          <FormTextBox
+            label="Details"
+            propName="details"
+            handleTextChange={handleTextChange}
+            multiline
+          />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              flex: 1,
+              width: "55vw",
+            }}
+          >
+            <Button
+              onClick={toggleCreateEvent}
+              style={{
+                marginTop: "1rem",
+                backgroundColor: "red",
+                borderColor: "red",
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={() => {
+                fetch("http://localhost:3001/CreateEvent", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(eventDetials),
+                });
+              }}
+              style={{ marginTop: "1rem" }}
+            >
+              Create
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          position: "absolute",
+          zIndex: 15,
+          opacity: "85%",
+          backgroundColor: "black",
+          height: "100vh",
+          width: "100vw",
+        }}
+      ></div>
     </div>
   );
 };
