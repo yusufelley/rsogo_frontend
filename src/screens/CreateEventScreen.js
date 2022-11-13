@@ -184,6 +184,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
                   },
                   body: JSON.stringify(eventDetails),
                 });
+                toggleCreateEvent();
               }}
               style={{ marginTop: "1rem" }}
             >
