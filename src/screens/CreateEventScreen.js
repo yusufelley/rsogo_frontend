@@ -9,19 +9,34 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import axios from "axios";
 
-const FormTextBox = ({ handleTextChange, label, propName, multiline }) => {
+const FormTextBox = ({
+  handleTextChange,
+  handleDateTimeChange,
+  label,
+  propName,
+  multiline,
+  dateTime,
+}) => {
   return (
     <div style={{ flex: 1, flexDirection: "row" }}>
       <div>{label}</div>
       {multiline ? (
         <textarea
           style={inputStyling}
-          onChange={(e) => handleTextChange(e, propName)}
+          onChange={
+            handleTextChange
+              ? (e) => handleTextChange(e, propName)
+              : (e) => handleDateTimeChange(e)
+          }
         />
       ) : (
         <input
           style={inputStyling}
-          onChange={(e) => handleTextChange(e, propName)}
+          onChange={
+            handleTextChange
+              ? (e) => handleTextChange(e, propName)
+              : (e) => handleDateTimeChange(e)
+          }
         />
       )}
     </div>
@@ -33,20 +48,19 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
     rso: undefined,
     name: undefined,
     date: undefined,
-    time: undefined,
     image: undefined,
     location: undefined,
     details: undefined,
   };
   const [dateTimeMoment, setDateTimeMoment] = useState(moment());
   const [eventDetails, setEventDetails] = useState(initialEventDetails);
-  const [image,setImage] = useState('');
+  const [image, setImage] = useState("");
 
-  const handleDateTimeChange = (dateTime) => {
-    setDateTimeMoment(dateTime);
-    const date = dateTime.subtract(10, "days").calendar();
-    const time = dateTime.format("LT");
-    setEventDetails((prev) => ({ ...prev, date: date, time: time }));
+  const handleDateTimeChange = (event) => {
+    setEventDetails((prev) => ({
+      ...prev,
+      date: moment(event.target.value).format("YYYY-MM-DD HH:mm"),
+    }));
   };
 
   const handleTextChange = (event, propName) => {
@@ -56,12 +70,12 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
   };
 
   const handleImage = (e) => {
-    console.log(e.target.files[0])
-    setEventDetails((prev) => ({...prev, image: e.target.files[0]}))
-    const formData = new FormData()
-    formData.append('image',image)
-    setEventDetails((prev) => ({...prev, image: formData}))
-  }
+    console.log(e.target.files[0]);
+    setEventDetails((prev) => ({ ...prev, image: e.target.files[0] }));
+    const formData = new FormData();
+    formData.append("image", image);
+    setEventDetails((prev) => ({ ...prev, image: formData }));
+  };
 
   // const handleAPI = () => {
   //   const formData = new FormData()
@@ -116,31 +130,25 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
             handleTextChange={handleTextChange}
           />
           <FormTextBox
-            label="Date"
+            label="Date & Time"
             propName="date"
-            handleTextChange={handleTextChange}
-          />
-          <FormTextBox
-            label="Time"
-            propName="time"
-            handleTextChange={handleTextChange}
+            handleDateTimeChange={handleDateTimeChange}
+            dateTime={eventDetails.date}
           />
           <FormTextBox
             label="Location"
             propName="location"
             handleTextChange={handleTextChange}
           />
-
           <FormTextBox
             label="Details"
             propName="details"
             handleTextChange={handleTextChange}
             multiline
           />
-          <div style={{alignSelf:"center",width:"230px",padding:"10px"}}>
+          <div style={{ alignSelf: "center", width: "230px", padding: "10px" }}>
             <input type="file" name="file" onChange={handleImage}></input>
           </div>
-
           <div
             style={{
               display: "flex",
