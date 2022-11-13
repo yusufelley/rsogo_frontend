@@ -7,6 +7,7 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import "./FlipTransition.css";
+import moment from "moment";
 
 const ICON_SIZE = 20;
 
@@ -18,14 +19,14 @@ function EventCard({
   location,
   onClick,
   handleClick,
+  details,
 }) {
   const [imageState, setImageState] = useState(img);
-
   return (
     <div className="event-card" onClick={onClick}>
       <div className="card-back" onClick={() => handleClick()}>
         <div style={title}>Event Details:</div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac quam at justo imperdiet rutrum. Etiam eget ornare mi, ut accumsan arcu. Nam dictum purus a ante euismod placerat. Cras tempus varius purus, sed dictum sapien semper sit amet. Maecenas cursus neque eu suscipit mollis. Cras tempor sem id elit tristique, at aliquam libero dignissim. 
+        {details}
         <div></div>
       </div>
       <div className="card-front">
@@ -33,11 +34,11 @@ function EventCard({
         <div style={keyDetails}>
           <div style={iconContainer}>
             <AiOutlineClockCircle size={ICON_SIZE} />
-            <p style={iconText}>{date.format("MM/DD/YYYY")}</p>
+            <p style={iconText}>{moment(date).format("MM/DD/YYYY")}</p>
           </div>
           <div style={iconContainer}>
             <FaRegCalendarAlt size={ICON_SIZE} />
-            <p style={iconText}>{date.format("hh:mm A")}</p>
+            <p style={iconText}>{moment(date).format("hh:mm A")}</p>
           </div>
         </div>
         <div style={iconContainer}>

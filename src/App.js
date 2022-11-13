@@ -24,6 +24,12 @@ function App() {
   const [showHome, setShowHome] = useState(false);
   const [showCreateEvent, setShowCreateEvent] = useState(false);
   const [currCard, setCard] = useState(null);
+  const [update, setUpdate] = useState(0);
+
+  const triggerServerRequest = () => {
+    console.log("trigger server");
+    setUpdate((prev) => ++prev);
+  };
 
   const toggleShowHome = () => {
     setShowHome((prev) => !prev);
@@ -39,13 +45,17 @@ function App() {
     { img: archery },
   ];
   console.log(showCreateEvent);
+  console.log(update);
   return (
     <div
       className="App"
       style={{ backgroundColor: "#c0c6d0", display: "flex" }}
     >
       {showCreateEvent ? (
-        <CreateEventScreen toggleCreateEvent={toggleCreateEvent} />
+        <CreateEventScreen
+          handleUpdate={triggerServerRequest}
+          toggleCreateEvent={toggleCreateEvent}
+        />
       ) : (
         <>
           <CreateButton handleClick={toggleCreateEvent} />
@@ -63,7 +73,11 @@ function App() {
         setShowCreateEvent={setShowCreateEvent}
         toggleCreateEvent={toggleCreateEvent}
       />
-      {showHome ? <Home /> : <OneRSO currCard={currCard} setCard={setCard} />}
+      {showHome ? (
+        <Home />
+      ) : (
+        <OneRSO isUpdate={update} currCard={currCard} setCard={setCard} />
+      )}
     </div>
   );
 }

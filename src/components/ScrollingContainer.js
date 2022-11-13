@@ -20,7 +20,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
 
   nextSevenDays.forEach((day) => {
     cardData.forEach((card) => {
-      if (card.date.isSame(day.date, "day")) {
+      if (moment(card.date).isSame(day.date, "day")) {
         day.events.push(card);
       }
     });
@@ -51,10 +51,11 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
             <div style={{ marginBottom: "50px" }}>
               <FlippableCard
                 img={card.image}
-                title={card.title}
+                title={card.title || card.name}
                 time={card.time}
                 date={card.date}
                 location={card.location}
+                details={card.details}
               />
             </div>
           ))

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import EventCard from "../components/EventCard";
 import testFlyer from "../assets/flyer2.png";
 import iftarFlyer from "../assets/happy_iftar.png";
@@ -9,10 +9,25 @@ import { ScrollingContainer } from "../components/ScrollingContainer";
 import "./OneRSO.css";
 import About from "../components/About/About";
 import moment from "moment";
+import axios from "axios";
 
-function OneRSO(props) {
-  const currCard = props.currCard;
-  const setCard = props.setCard;
+function OneRSO({ isUpdate }) {
+  const [serverResponse, setServerResponse] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(
+    () => async () =>
+      await axios
+        .get("http://localhost:3001/event/msa")
+        .then((res) => setServerResponse(res.data.data))
+        .finally(() => {
+          setLoading(false);
+        }),
+    [isUpdate]
+  );
+
+  useEffect(() => console.log("theres an update"), [isUpdate]);
+  console.log(isUpdate);
 
   const eventCards = [
     {
@@ -46,6 +61,11 @@ function OneRSO(props) {
       location: "ILC",
     },
   ];
+
+  if (loading) {
+    return <div> loading... </div>;
+  }
+  console.log("res: ", serverResponse);
   return (
     <div>
       <div className="one-RSO-header">
@@ -54,7 +74,7 @@ function OneRSO(props) {
         </div>
         <About rsoName="MSA" body="Muslim Students Association" />
       </div>
-      <ScrollingContainer cardData={eventCards} />
+      <ScrollingContainer cardData={serverResponse} />
     </div>
   );
 }

@@ -43,7 +43,7 @@ const FormTextBox = ({
   );
 };
 
-export const CreateEventScreen = ({ toggleCreateEvent }) => {
+export const CreateEventScreen = ({ toggleCreateEvent, handleUpdate }) => {
   const initialEventDetails = {
     rso: undefined,
     name: undefined,
@@ -146,7 +146,6 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
             handleTextChange={handleTextChange}
           />
 
-
           <FormTextBox
             label="Details"
             propName="details"
@@ -184,6 +183,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
                   },
                   body: JSON.stringify(eventDetails),
                 });
+                handleUpdate();
                 toggleCreateEvent();
               }}
               style={{ marginTop: "1rem" }}
