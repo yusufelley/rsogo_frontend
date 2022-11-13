@@ -1,13 +1,23 @@
 //import "./SideBar.css"
 import { AiFillHome } from "react-icons/ai"
 import React from 'react';
+import { FaCentercode } from "react-icons/fa";
 
 const SideBar = (props) => {
     return(
         <div style = {sidebarStyle}>
-            <button>
-                <AiFillHome/>
+            <button style = {homeButton}>
+                <AiFillHome style = {iconStyle}/>
             </button>
+            <hr
+                    style={{
+                        background: 'white',
+                        color: 'white',
+                        borderColor: 'white',
+                        height: '3px',
+                        transparency: "0"
+                    }}
+                />
             {/* <Pressable style = {homeButton} onPress={console.log("Pressed")}>
                 <AiFillHome/>
             </Pressable>  */}
@@ -22,14 +32,18 @@ const sidebarStyle = {
     flexDirection: "column",
 }
 
+const iconStyle = {
+    height: "4vh" ,
+    width: "11vw"
+}
+
 const homeButton = {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: 'black',
+    marginTop: "1vh",
+    height: "6vh",
+    width: "15vw",
+    color: "white",
+    backgroundColor: "maroon",
+    borderColor: "transparent"
 }
 
 export default SideBar;
