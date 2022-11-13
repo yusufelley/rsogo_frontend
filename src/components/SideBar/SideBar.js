@@ -1,11 +1,29 @@
 import { AiFillHome } from "react-icons/ai";
+import "../../App.css";
 import React from "react";
 import "./SideBar";
+import { CreateEventScreen } from "../../screens/CreateEventScreen";
+import { CreateButton } from "../CreateButton";
+import OneRSO from "../../screens/OneRSO";
 import RSOIcon from "../RSOIcon/RSOIcon";
 import msa from "../../assets/msa.png";
 import { PRIMARY_COLOR } from "../../configs/colors";
+import { Home } from "../../screens/Home";
 
-const SideBar = ({ rsoData }) => {
+const SideBar = (props) => {
+
+    const rsoData = props.rsoData;
+
+    const showHome =  props.showHome
+    const setShowHome = props.setShowHome
+    const currCard = props.currCard;
+    const setCard = props.setCard;
+    const showCreateEvent = props.showCreateEvent;
+    const setShowCreateEvent = props.setShowCreateEvent;
+    const toggleCreateEvent = props.toggleCreateEvent;
+
+
+
   // state = {
   //     touched: false
   // }
@@ -22,13 +40,29 @@ const SideBar = ({ rsoData }) => {
   //         this.setState({ touched: false });
   //     }, 150);
   // }
-
+    const homeClick = () => {
+        setShowHome(true);
+        return (
+            <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
+                {showCreateEvent ? (
+                    <CreateEventScreen toggleCreateEvent={toggleCreateEvent} />
+                ) : (
+                    <>
+                    <CreateButton handleClick={toggleCreateEvent} />
+            </>
+        )}
+      <SideBar rsoData={rsoData} />
+      {showHome ? <Home /> : <OneRSO currCard = {currCard} setCard = {setCard}/>}
+    </div>
+            
+        )
+    }
   return (
     <div style={sidebarStyle}>
       {/* {/* <button style = {homeButton}>
                 <AiFillHome style = {iconStyle}/>
             </button> */}
-      <button style={homeButton}>
+      <button style={homeButton} onClick = {homeClick}>
         <AiFillHome style={iconStyle} />
       </button>
 

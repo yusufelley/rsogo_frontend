@@ -5,6 +5,9 @@ import { useState } from "react";
 import FlippableCard from "./FlippableCard";
 
 export const ScrollingContainer = ({ cardData, showHome }) => {
+  
+  const viewedData = cardData;
+  
   return (
     <div>
       <div
