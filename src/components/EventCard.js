@@ -28,20 +28,20 @@ function EventCard({
         <div></div>
       </div>
       <div className="card-front">
-        <div style={title}>Welcome Back!</div>
+        <div style={title}>{titleText}</div>
         <div style={keyDetails}>
           <div style={iconContainer}>
             <AiOutlineClockCircle size={ICON_SIZE} />
-            <p style={iconText}>7:30PM</p>
+            <p style={iconText}>{date.format("MM/DD/YYYY")}</p>
           </div>
           <div style={iconContainer}>
             <FaRegCalendarAlt size={ICON_SIZE} />
-            <p style={iconText}>10/22/2022</p>
+            <p style={iconText}>{date.format("hh:mm A")}</p>
           </div>
         </div>
         <div style={iconContainer}>
           <MdOutlineLocationOn style={icon} size={ICON_SIZE + 5} />
-          <p style={iconText}>Campus Center</p>
+          <p style={iconText}>{location}</p>
         </div>
         <img
           onClick={() => {

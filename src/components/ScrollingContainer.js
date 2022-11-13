@@ -50,7 +50,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
             <div style={{ marginBottom: "50px" }}>
               <FlippableCard
                 img={card.image}
-                title={card.text}
+                title={card.title}
                 time={card.time}
                 date={card.date}
                 location={card.location}
