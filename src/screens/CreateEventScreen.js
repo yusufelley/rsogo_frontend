@@ -7,6 +7,7 @@ import TextField from "@mui/material/TextField";
 import moment from "moment";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
+//import axios from "axios";
 
 const FormTextBox = ({ handleTextChange, label, propName, multiline }) => {
   return (
@@ -88,12 +89,25 @@ export const CreateEventScreen = () => {
         handleTextChange={handleTextChange}
       />
       <FormTextBox
-        label="Detials"
-        propName="detials"
-        handleTextChange={handleDateTimeChange}
+        label="Details"
+        propName="details"
+        handleTextChange={handleTextChange}
         multiline
       />
-      <Button style={{ marginTop: "1rem" }}>Create</Button>
+      <Button
+        onClick={() => {
+          fetch("http://localhost:3001/CreateEvent", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(eventDetials),
+          });
+        }}
+        style={{ marginTop: "1rem" }}
+      >
+        Create
+      </Button>
     </div>
   );
 };

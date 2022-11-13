@@ -11,14 +11,16 @@ import SideBar from "./components/SideBar";
 import React, { useState } from "react";
 import OneRSO from "./screens/OneRSO";
 import { CreateButton } from "./components/CreateButton";
+import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
-  const [showHome, setShowHome] = useState(false);
+  const [showHome, setShowHome] = useState(true);
   return (
     <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
       <CreateButton />
       <SideBar />
       {showHome ? <Home /> : <OneRSO />}
+      <CreateEventScreen></CreateEventScreen>
     </div>
   );
 }

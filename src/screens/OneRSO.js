@@ -46,7 +46,7 @@ function OneRSO() {
       title: "Test Title",
       time: "1:00 PM",
       date: "12/1/22",
-      location: "ILC",
+      location: "ILC"
     },
     {
       image: testFlyer,
