@@ -72,9 +72,12 @@ function OneRSO({ isUpdate }) {
         <div className="club-name-header" style={{ fontFamily: "monospace" }}>
           MSA
         </div>
-        <About rsoName="MSA" body="The MSA exists to facilitate the practice of Islam on campus. By bringing Muslims together and providing important services, the MSA creates an Islamic atmosphere allowing students to continue their spiritual journey while also successfully completing their studies." />
+        <About
+          rsoName="MSA"
+          body="The MSA exists to facilitate the practice of Islam on campus. By bringing Muslims together and providing important services, the MSA creates an Islamic atmosphere allowing students to continue their spiritual journey while also successfully completing their studies."
+        />
       </div>
-      <ScrollingContainer cardData={serverResponse} />
+      <ScrollingContainer cardData={[...eventCards, ...serverResponse]} />
     </div>
   );
 }
