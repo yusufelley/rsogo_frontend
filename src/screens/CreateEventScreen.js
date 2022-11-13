@@ -55,13 +55,13 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
     setEventDetails((prev) => ({ ...prev, [propName]: event.target.value }));
   };
 
-  const handleImage = (e) => {
-    console.log(e.target.files[0])
-    setEventDetails((prev) => ({...prev, image: e.target.files[0]}))
-    const formData = new FormData()
-    formData.append('image',image)
-    setEventDetails((prev) => ({...prev, image: formData}))
-  }
+  // const handleImage = (e) => {
+  //   console.log(e.target.files[0])
+  //   setEventDetails((prev) => ({...prev, image: e.target.files[0]}))
+  //   const formData = new FormData()
+  //   formData.append('image',image)
+  //   setEventDetails((prev) => ({...prev, image: formData}))
+  // }
 
   // const handleAPI = () => {
   //   const formData = new FormData()
@@ -137,12 +137,17 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
           />
 
           <FormTextBox
+            label="Image URL"
+            propName="image"
+            handleTextChange={handleTextChange}
+          />
+          
+          <FormTextBox
             label="Details"
             propName="details"
             handleTextChange={handleTextChange}
             multiline
           />
-
           {/* <div style={{alignSelf:"center",width:"230px",padding:"10px"}}>
             <input type="file" name="file" onChange={handleImage}></input>
           </div> */}
