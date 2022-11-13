@@ -3,6 +3,7 @@ import EventCard from "../components/EventCard";
 import testFlyer from "../assets/flyer2.png";
 import { ScrollingContainer } from "../components/ScrollingContainer";
 import "./OneRSO.css";
+import About from "../components/About/About"
 
 function OneRSO(props) {
   const currCard = props.currCard;
@@ -68,7 +69,11 @@ function OneRSO(props) {
 
   ];
   return (
-    <div className="main-container">
+    <div>
+      <div className="one-RSO-header">
+        <div className="club-name-header">MSA</div>
+        <About rsoName="MSA" body="hdskdjhwjasdljw s ldjwoiajdslkwja  daskldjdwj" />
+      </div>
       <ScrollingContainer cardData={eventCards} />
     </div>
   );
