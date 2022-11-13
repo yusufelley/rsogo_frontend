@@ -18,6 +18,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
       >
         {showHome ? (
           <div>
+            {cardData.filter((card) => card.day === "mon").length > 0 ? (
             <div class="day" style={{ marginBottom: "80px" }}>
               Mon
               {cardData
@@ -33,7 +34,8 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
                     />
                   </div>
                 ))}
-            </div>
+            </div>) : (null) }
+            {cardData.filter((card) => card.day === "tue").length > 0 ? (
             <div class="day" style={{ marginBottom: "80px" }}>
               Tue
               {cardData
@@ -49,7 +51,8 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
                     />
                   </div>
                 ))}
-            </div>
+            </div>) : (null) }
+            {cardData.filter((card) => card.day === "wed").length > 0 ? (
             <div class="day" style={{ marginBottom: "80px" }}>
               Wed
               {cardData
@@ -65,7 +68,8 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
                     />
                   </div>
                 ))}
-            </div>
+            </div>) : (null) }
+            {cardData.filter((card) => card.day === "thur").length > 0 ? (
             <div class="day" style={{ marginBottom: "80px" }}>
               Thur
               {cardData
@@ -81,7 +85,8 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
                     />
                   </div>
                 ))}
-            </div>
+            </div>) : (null) }
+            {cardData.filter((card) => card.day === "fri").length > 0 ? (
             <div class="day" style={{ marginBottom: "80px" }}>
               Fri
               {cardData
@@ -97,7 +102,8 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
                     />
                   </div>
                 ))}
-            </div>
+            </div>) : (null) }
+            {cardData.filter((card) => card.day === "sat").length > 0 ? (
             <div class="day" style={{ marginBottom: "80px" }}>
               Sat
               {cardData
@@ -113,7 +119,8 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
                     />
                   </div>
                 ))}
-            </div>
+            </div>) : (null) }
+            {cardData.filter((card) => card.day === "sun").length > 0 ? (
             <div class="day" style={{ marginBottom: "80px" }}>
               Sun
               {cardData
@@ -129,7 +136,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
                     />
                   </div>
                 ))}
-            </div>
+            </div>) : (null) }
           </div>
         ) : (
           cardData.map((card) => (
