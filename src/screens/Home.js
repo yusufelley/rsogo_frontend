@@ -12,7 +12,8 @@ export const Home = (props) => {
       txtColor: "white",
       img: msa,
       text: "MSA Welcome Back",
-      time: "10:0pm",
+      time: "10:00pm",
+      day: "mon"
     },
     {
       bg: "danger",
@@ -20,6 +21,7 @@ export const Home = (props) => {
       img: msa,
       text: "MSA Welcome Back",
       time: "10:00pm",
+      day: "mon"
     },
     {
       bg: "danger",
@@ -27,6 +29,7 @@ export const Home = (props) => {
       img: msa,
       text: "MSA Welcome Back",
       time: "10:00pm",
+      day: "mon"
     },
     {
       bg: "danger",
@@ -34,6 +37,7 @@ export const Home = (props) => {
       img: msa,
       text: "MSA Welcome Back",
       time: "10:00pm",
+      day: "mon"
     },
     {
       bg: "danger",
@@ -41,6 +45,7 @@ export const Home = (props) => {
       img: msa,
       text: "MSA Welcome Back",
       time: "10:00pm",
+      day: "mon"
     },
     {
       bg: "danger",
@@ -48,6 +53,7 @@ export const Home = (props) => {
       img: msa,
       text: "MSA Welcome Back",
       time: "10:00pm",
+      day: "sun"
     },
     {
       bg: "danger",
@@ -55,6 +61,7 @@ export const Home = (props) => {
       img: msa,
       text: "MSA Welcome Back",
       time: "10:00pm",
+      day: "sun"
     },
   ];
   return (
