@@ -3,6 +3,7 @@ import { Row } from "react-bootstrap";
 import { ScrollingContainer } from "../components/ScrollingContainer";
 import SideBar from "../components/SideBar/SideBar";
 import msa from "../assets/msa.png";
+import logo from "../assets/RSOlogo.png";
 import "./Home.css";
 import moment from "moment";
 import { WHITE_COLOR } from "../configs/colors";
@@ -90,7 +91,7 @@ export const Home = (props) => {
         style={{ backgroundColor: "#c0c6d0", display: "flex", flexDirection:"column" }}
       >
       <div className="club-name-header" style={{ fontFamily: "monospace" }}>
-        RSO GO
+        <img src={logo} alt="logo" style={{width:"70vw", height:"70px", position:"relative", right: 20, top: 5}}/>
       </div>
       <ScrollingContainer showHome cardData={cards}></ScrollingContainer>
       </div>
