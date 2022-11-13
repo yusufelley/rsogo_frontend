@@ -2,13 +2,26 @@ import React, { useState } from "react";
 import { Row } from "react-bootstrap";
 import { ScrollingContainer } from "../components/ScrollingContainer";
 import SideBar from "../components/SideBar/SideBar";
+
 import msa from "../assets/msa.png";
+import smash from "../assets/umass-smashbros.png";
+import hockey from "../assets/umass-hockey.jpg";
+import acm from "../assets/umass-acm.png";
+import archery from "../assets/umass-archery.jpg";
+
 import "./Home.css";
 import moment from "moment";
 import { WHITE_COLOR } from "../configs/colors";
 
 export const Home = (props) => {
   const cards = [
+    {
+      bg: "danger",
+      txtColor: "white",
+      img: msa,
+      text: "Yesterday",
+      date: moment({ year: 2022, month: 10, day: 12, hour: 18, minute: 0 }),
+    },
     {
       bg: "danger",
       txtColor: "white",
