@@ -10,9 +10,8 @@ import './FlipTransition.css'
 
 const ICON_SIZE = 20;
 
-function EventCard({img,titleText,time,date,locaiton,onClick,handleClick}) {
+function EventCard({img,titleText,time,date,location,onClick,handleClick}) {
   const [imageState,setImageState] = useState(img);
-
   
   return (
     <div className="event-card" onClick={onClick}>
