@@ -13,7 +13,6 @@ import { Home } from "../../screens/Home";
 
 const SideBar = (props) => {
   const rsoData = props.rsoData;
-
   const showHome = props.showHome;
   const setShowHome = props.setShowHome;
   const currCard = props.currCard;

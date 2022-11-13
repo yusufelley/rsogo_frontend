@@ -33,6 +33,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
           backgroundColor: WHITE_COLOR,
           width: "85vw", // remove
           height: "100vh", // remove
+          marginTop: 5,
           padding: "12px",
           borderTopRightRadius: "1rem",
           borderTopLeftRadius: "1rem",
