@@ -1,6 +1,7 @@
 import React from "react";
 import EventCard from "./EventCard";
 import HomeCard from "./HomeCard/HomeCard";
+import { useState } from "react";
 
 export const ScrollingContainer = ({ cardData, showHome }) => {
   console.log(cardData);
@@ -11,6 +12,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
           backgroundColor: "#e7e7e7",
           width: "85vw", // remove
           height: "100vh", // remove
+          padding: "12px",
         }}
         className="overflow-scroll"
       >

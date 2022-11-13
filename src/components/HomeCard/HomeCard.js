@@ -3,14 +3,15 @@ import Card from "react-bootstrap/Card";
 import "./HomeCard.css";
 
 function HomeCard(props) {
-  const bg = props.bg;
-  const txtColor = props.txtColor;
-  const img = props.img;
-  const text = props.text;
-  const time = props.time;
+  const [bg, setBg] = useState(props.bg);
+  const [txtColor, setTxtColor] = useState(props.txtColor);
+  const [img, setImg] = useState(props.img);
+  const [text, setText] = useState(props.text);
+  const [time, setTime] = useState(props.time);
+  const [day, setDay] = useState(props.setDay);
 
   return (
-    <div className="container">
+    <div className="home-card-container">
       <img className="club-img" src={img} alt="club-img"></img>
       <div className="flex1">
         <Card className="card" bg={bg} text={txtColor}>
