@@ -1,13 +1,13 @@
 import { height } from "@mui/system";
 import React from "react";
 import { IoIosAdd } from "react-icons/io";
-
+import { PRIMARY_COLOR } from "../configs/colors";
 export const CreateButton = () => {
   return (
     <button
       className="shadow"
       style={{
-        backgroundColor: "#FF325C",
+        backgroundColor: PRIMARY_COLOR,
         height: "3.5rem",
         width: "3.5rem",
         borderRadius: "10rem",
