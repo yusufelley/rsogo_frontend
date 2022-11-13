@@ -14,10 +14,8 @@ import OneRSO from "./screens/OneRSO";
 function App() {
   const [showHome, setShowHome] = useState(false);
   return (
-    <div className="App" style={{ backgroundColor: "blue", flex: 1 }}>
-      {/* <EventCard img = {testFlyer}></EventCard> */}
-      {/* <SideBar /> */}
-      {/* <Home /> */}
+    <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
+      <SideBar />
       {showHome ? <Home /> : <OneRSO />}
     </div>
   );
