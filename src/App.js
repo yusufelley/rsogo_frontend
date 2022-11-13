@@ -17,7 +17,7 @@ import SideBar from "./components/SideBar/SideBar";
 import React, { useState } from "react";
 import OneRSO from "./screens/OneRSO";
 import { CreateButton } from "./components/CreateButton";
-
+import { WHITE_COLOR } from "./configs/colors";
 import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
@@ -25,6 +25,9 @@ function App() {
   const [showCreateEvent, setShowCreateEvent] = useState(false);
   const [currCard, setCard] = useState(null);
 
+  const toggleShowHome = () => {
+    setShowHome((prev) => !prev);
+  };
   const toggleCreateEvent = () => {
     setShowCreateEvent((prev) => !prev);
   };
@@ -33,11 +36,14 @@ function App() {
     { img: smash },
     { img: acm },
     { img: hockey },
-    { img: archery }
+    { img: archery },
   ];
   console.log(showCreateEvent);
   return (
-    <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
+    <div
+      className="App"
+      style={{ backgroundColor: "#c0c6d0", display: "flex" }}
+    >
       {showCreateEvent ? (
         <CreateEventScreen toggleCreateEvent={toggleCreateEvent} />
       ) : (
@@ -47,8 +53,10 @@ function App() {
       )}
       <SideBar
         rsoData={RSOs}
+        showRSO={() => setShowHome(false)}
         showHome={showHome}
         setShowHome={setShowHome}
+        toggleShowHome={toggleShowHome}
         currCard={currCard}
         setCard={setCard}
         showCreateEvent={showCreateEvent}

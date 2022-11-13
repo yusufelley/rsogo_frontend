@@ -63,11 +63,10 @@ function OneRSO(props) {
   return (
     <div>
       <div className="one-RSO-header">
-        <div className="club-name-header">MSA</div>
-        <About
-          rsoName="MSA"
-          body="hdskdjhwjasdljw s ldjwoiajdslkwja  daskldjdwj"
-        />
+        <div className="club-name-header" style={{ fontFamily: "monospace" }}>
+          MSA
+        </div>
+        <About rsoName="MSA" body="Muslim Students Association" />
       </div>
       <ScrollingContainer cardData={eventCards} />
     </div>

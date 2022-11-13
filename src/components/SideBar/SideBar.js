@@ -82,7 +82,7 @@ const SideBar = (props) => {
       />
       {rsoData.map((rso) => (
         <div style={{ marginBottom: "10px" }}>
-          <RSOIcon img={rso.img} />
+          <RSOIcon img={rso.img} handleClick={props.showRSO} />
         </div>
       ))}
       {/* <RSOIcon img = {msa}/> */}

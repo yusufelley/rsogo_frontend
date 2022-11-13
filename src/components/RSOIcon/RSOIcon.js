@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const RSOIcon = (props) => {
-    const img = props.img
-    const handleEvent = () => {console.log()}
+const RSOIcon = ({ img, handleClick }) => {
+  return (
+    <button
+      style={{ borderRadius: "50rem", backgroundColor: "transparent" }}
+      className="rso-button"
+      onClick={() => handleClick()}
+    >
+      <img className="club-img" src={img} alt={img}></img>
+    </button>
+  );
+};
 
-    return(
-            <button style={{borderRadius:"50rem", backgroundColor:"transparent"}}  className = "rso-button" onClick = {() => {console.log("pressed RSO")}} >
-                <img className = "club-img" src={img} alt={img}></img>
-            </button>
-    )
-}
-
-export default RSOIcon
+export default RSOIcon;

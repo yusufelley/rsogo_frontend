@@ -3,6 +3,7 @@ import EventCard from "./EventCard";
 import HomeCard from "./HomeCard/HomeCard";
 import { useState } from "react";
 import FlippableCard from "./FlippableCard";
+import { WHITE_COLOR } from "../configs/colors";
 import { DayContainer } from "./DayContainer";
 import moment from "moment";
 
@@ -29,10 +30,12 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
     <div>
       <div
         style={{
-          backgroundColor: "#E9E3E3",
+          backgroundColor: WHITE_COLOR,
           width: "85vw", // remove
           height: "100vh", // remove
           padding: "12px",
+          borderTopRightRadius: "1rem",
+          borderTopLeftRadius: "1rem",
         }}
         className="overflow-scroll"
       >

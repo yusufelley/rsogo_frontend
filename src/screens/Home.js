@@ -5,6 +5,7 @@ import SideBar from "../components/SideBar/SideBar";
 import msa from "../assets/msa.png";
 import "./Home.css";
 import moment from "moment";
+import { WHITE_COLOR } from "../configs/colors";
 
 export const Home = (props) => {
   const cards = [
@@ -82,7 +83,7 @@ export const Home = (props) => {
   return (
     <div
       className="main-container"
-      style={{ display: "inline-block", backgroundColor: "yellow" }}
+      style={{ display: "inline-block", backgroundColor: WHITE_COLOR }}
     >
       <ScrollingContainer showHome cardData={cards}></ScrollingContainer>
     </div>
