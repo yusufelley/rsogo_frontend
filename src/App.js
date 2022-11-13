@@ -1,23 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HomeCard from "./components/HomeCard/HomeCard";
-
 import msa from "./assets/msa.png";
 import smash from "./assets/umass-smashbros.png";
 import hockey from "./assets/umass-hockey.jpg";
 import acm from "./assets/umass-acm.png";
 import archery from "./assets/umass-archery.jpg";
-
-import msaFlyer from "./assets/flyer.jpg";
-import testFlyer from "./assets/flyer2.png";
-import EventCard from "./components/EventCard";
 import { Home } from "./screens/Home";
 import SideBar from "./components/SideBar/SideBar";
 import React, { useState } from "react";
 import OneRSO from "./screens/OneRSO";
 import { CreateButton } from "./components/CreateButton";
-import { WHITE_COLOR } from "./configs/colors";
+
 import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
@@ -47,7 +40,6 @@ function App() {
   console.log(showCreateEvent);
   console.log(update);
   return (
-
     <div
       className="App"
       style={{ backgroundColor: "#c0c6d0", display: "flex" }}
