@@ -130,6 +130,11 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
             propName="location"
             handleTextChange={handleTextChange}
           />
+          <FormTextBox
+            label="Image URL"
+            propName="image"
+            handleTextChange={handleTextChange}
+          />
 
           <FormTextBox
             label="Details"
@@ -137,9 +142,10 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
             handleTextChange={handleTextChange}
             multiline
           />
-          <div style={{alignSelf:"center",width:"230px",padding:"10px"}}>
+
+          {/* <div style={{alignSelf:"center",width:"230px",padding:"10px"}}>
             <input type="file" name="file" onChange={handleImage}></input>
-          </div>
+          </div> */}
 
           <div
             style={{
