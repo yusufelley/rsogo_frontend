@@ -1,9 +1,71 @@
-import React from 'react'
-
+import React from "react";
+import EventCard from "../components/EventCard";
+import testFlyer from "../assets/flyer2.png";
+import { ScrollingContainer } from "../components/ScrollingContainer";
 function OneRSO() {
+  const eventCards = [
+    {
+      image: testFlyer,
+      title: "Test Title",
+      time: "1:00 PM",
+      date: "12/1/22",
+      location: "ILC",
+    },
+    {
+      image: testFlyer,
+      title: "Test Title",
+      time: "1:00 PM",
+      date: "12/1/22",
+      location: "ILC",
+    },
+    {
+      image: testFlyer,
+      title: "Test Title",
+      time: "1:00 PM",
+      date: "12/1/22",
+      location: "ILC",
+    },
+    {
+      image: testFlyer,
+      title: "Test Title",
+      time: "1:00 PM",
+      date: "12/1/22",
+      location: "ILC",
+    },
+    {
+      image: testFlyer,
+      title: "Test Title",
+      time: "1:00 PM",
+      date: "12/1/22",
+      location: "ILC",
+    },
+    {
+      image: testFlyer,
+      title: "Test Title",
+      time: "1:00 PM",
+      date: "12/1/22",
+      location: "ILC",
+    },
+    {
+      image: testFlyer,
+      title: "Test Title",
+      time: "1:00 PM",
+      date: "12/1/22",
+      location: "ILC",
+    },
+    {
+      image: testFlyer,
+      title: "Test Title",
+      time: "1:00 PM",
+      date: "12/1/22",
+      location: "ILC",
+    },
+  ];
   return (
-    <div></div>
-  )
+    <div className="main-container">
+      <ScrollingContainer cardData={eventCards} />
+    </div>
+  );
 }
 
-export default OneRSO
+export default OneRSO;

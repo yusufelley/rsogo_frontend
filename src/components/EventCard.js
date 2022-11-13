@@ -10,13 +10,13 @@ import { MdOutlineLocationOn } from "react-icons/md";
 const ICON_SIZE = 20;
 
 function EventCard(props) {
-  const img = props.img
-  const titleText = props.title
-  const time = props.time
-  const date = props.date
-  const location = props.location
+  const img = props.img;
+  const titleText = props.title;
+  const time = props.time;
+  const date = props.date;
+  const location = props.location;
 
-  return ( 
+  return (
     <div style={containerStyle} className="shadow">
       <div style={title}>Welcome Back!</div>
       <div style={keyDetails}>
@@ -41,7 +41,6 @@ function EventCard(props) {
           <Button className="btn-dark btn-sm" style={buttonStyle}>
             RSVP
           </Button>
-          
         </div>
       </div>
     </div>
@@ -49,7 +48,7 @@ function EventCard(props) {
 }
 
 const containerStyle = {
-  display:"flex",
+  display: "flex",
   flexDirection: "column",
   width: "70vw",
   height: "52vh",
@@ -58,7 +57,7 @@ const containerStyle = {
   position: "relative",
   left: "5vw",
   top: "5vh",
-  padding: "10px"
+  padding: "10px",
 };
 
 const buttonStyle = {
@@ -82,7 +81,7 @@ const buttonStyle = {
 const title = {
   fontSize: 15,
   marginLeft: 5,
-  marginBottom: 5
+  marginBottom: 5,
 };
 
 const keyDetails = {
@@ -97,10 +96,10 @@ const iconContainer = {
 const iconText = {
   fontSize: 12,
   padding: 0,
-  margin: 0
+  margin: 0,
 };
 const icon = {
-  marginLeft: 0
+  marginLeft: 0,
 };
 const bottomBar = {
   display: "flex",
@@ -108,12 +107,11 @@ const bottomBar = {
   justifyContent: "space-between",
 };
 const image = {
-  height:"36vh", 
-  width:"64vw", 
-  alignSelf:"center", 
-  marginBottom: 5, 
-  marginTop: 5
-}
-
+  height: "36vh",
+  width: "64vw",
+  alignSelf: "center",
+  marginBottom: 5,
+  marginTop: 5,
+};
 
 export default EventCard;

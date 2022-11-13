@@ -1,7 +1,9 @@
 import React from "react";
+import EventCard from "./EventCard";
 import HomeCard from "./HomeCard/HomeCard";
 
-export const ScrollingContainer = ({cardData}) => {
+export const ScrollingContainer = ({ cardData, showHome }) => {
+  console.log(cardData);
   return (
     <div>
       <div
@@ -12,7 +14,27 @@ export const ScrollingContainer = ({cardData}) => {
         }}
         className="overflow-scroll"
       >
-        {cardData.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
+        {cardData.map((card) => (
+          <div style={{ marginBottom: "80px" }}>
+            {showHome ? (
+              <HomeCard
+                bg={card.bg}
+                txtColor={card.txtColor}
+                img={card.img}
+                text={card.text}
+                time={card.time}
+              />
+            ) : (
+              <EventCard
+                img={card.img}
+                title={card.text}
+                time={card.time}
+                date={card.date}
+                location={card.location}
+              />
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
