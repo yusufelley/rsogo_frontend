@@ -2,6 +2,7 @@ import React from "react";
 import EventCard from "./EventCard";
 import HomeCard from "./HomeCard/HomeCard";
 import { useState } from "react";
+import FlippableCard from "./FlippableCard";
 
 export const ScrollingContainer = ({ cardData, showHome }) => {
   return (
@@ -133,7 +134,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
         ) : (
           cardData.map((card) => (
             <div style={{ marginBottom: "20px" }}>
-              <EventCard
+              <FlippableCard
                 img={card.image}
                 title={card.text}
                 time={card.time}
@@ -156,7 +157,7 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
                 time={card.time}
               />
             ) : (
-              <EventCard
+              <FlippableCard
                 img={card.image}
                 title={card.text}
                 time={card.time}
