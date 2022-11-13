@@ -19,7 +19,7 @@ const sidebarStyle = {
     height: "100vh",
     width: "15vw",
     background: 'maroon',
-    flexDirection: "column"
+    flexDirection: "column",
 }
 
 const homeButton = {

@@ -7,7 +7,7 @@ export const ScrollingContainer = ({cardData}) => {
       <div
         style={{
           backgroundColor: "#e7e7e7",
-          width: "100vw", // remove
+          width: "85vw", // remove
           height: "100vh", // remove
         }}
         className="overflow-scroll"

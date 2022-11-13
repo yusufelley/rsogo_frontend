@@ -41,6 +41,7 @@ function EventCard(props) {
           <Button className="btn-dark btn-sm" style={buttonStyle}>
             RSVP
           </Button>
+          
         </div>
       </div>
     </div>
