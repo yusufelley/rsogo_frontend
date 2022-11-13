@@ -24,26 +24,26 @@ export const ScrollingContainer = ({cardData}) => {
         }}
         className="overflow-scroll"
       >
-        <div class="mon">Mon
-          {mon.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
+        <div class="mon" style={{marginBottom: "80px"}}>Mon
+          {mon.map((card) => <div style={{marginBottom: "20px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
         </div>
-        <div class="tue">Tue
-          {tue.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
+        <div class="tue" style={{marginBottom: "80px"}}>Tue
+          {tue.map((card) => <div style={{marginBottom: "20px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
         </div>
-        <div class="monday">Wed
-          {wed.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
+        <div class="monday" style={{marginBottom: "80px"}}>Wed
+          {wed.map((card) => <div style={{marginBottom: "20px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
         </div>
-        <div class="monday">Thur
-          {thur.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
+        <div class="monday" style={{marginBottom: "80px"}}>Thur
+          {thur.map((card) => <div style={{marginBottom: "20px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
         </div>
-        <div class="monday">Fri
-          {fri.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
+        <div class="monday" style={{marginBottom: "80px"}}>Fri
+          {fri.map((card) => <div style={{marginBottom: "20px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
         </div>
-        <div class="monday">Sat
-          {sat.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
+        <div class="monday" style={{marginBottom: "80px"}}>Sat
+          {sat.map((card) => <div style={{marginBottom: "20px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
         </div>
-        <div class="monday">Sun
-          {sun.map((card) => <div style={{marginBottom: "80px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
+        <div class="monday" style={{marginBottom: "80px"}}>Sun
+          {sun.map((card) => <div style={{marginBottom: "20px"}}><HomeCard bg={card.bg} txtColor={card.txtColor} img={card.img} text={card.text} time={card.time}/></div>)}
         </div>
       </div>
     </div>
