@@ -2,7 +2,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeCard from "./components/HomeCard/HomeCard";
+
 import msa from "./assets/msa.png";
+import smash from "./assets/umass-smashbros.png";
+import hockey from "./assets/umass-hockey.jpg";
+import acm from "./assets/umass-acm.png";
+import archery from "./assets/umass-archery.jpg";
+
 import msaFlyer from "./assets/flyer.jpg";
 import testFlyer from "./assets/flyer2.png";
 import EventCard from "./components/EventCard";
@@ -19,17 +25,15 @@ function App() {
   const [showCreateEvent, setShowCreateEvent] = useState(false);
   const [currCard, setCard] = useState(null);
 
-
   const toggleCreateEvent = () => {
     setShowCreateEvent((prev) => !prev);
   };
   const RSOs = [
     { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
+    { img: smash },
+    { img: acm },
+    { img: hockey },
+    { img: archery }
   ];
   console.log(showCreateEvent);
   return (
@@ -41,16 +45,17 @@ function App() {
           <CreateButton handleClick={toggleCreateEvent} />
         </>
       )}
-      <SideBar rsoData={RSOs} 
-        showHome = {showHome}
-        setShowHome = {setShowHome}
-        currCard = {currCard}
-        setCard = {setCard}
-        showCreateEvent = {showCreateEvent}
-        setShowCreateEvent = {setShowCreateEvent}
-        toggleCreateEvent = {toggleCreateEvent}
+      <SideBar
+        rsoData={RSOs}
+        showHome={showHome}
+        setShowHome={setShowHome}
+        currCard={currCard}
+        setCard={setCard}
+        showCreateEvent={showCreateEvent}
+        setShowCreateEvent={setShowCreateEvent}
+        toggleCreateEvent={toggleCreateEvent}
       />
-      {showHome ? <Home /> : <OneRSO currCard = {currCard} setCard = {setCard}/>}
+      {showHome ? <Home /> : <OneRSO currCard={currCard} setCard={setCard} />}
     </div>
   );
 }

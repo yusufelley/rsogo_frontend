@@ -4,17 +4,27 @@ import HomeCard from "./HomeCard/HomeCard";
 import { useState } from "react";
 import FlippableCard from "./FlippableCard";
 import { DayContainer } from "./DayContainer";
+import moment from "moment";
 
 export const ScrollingContainer = ({ cardData, showHome }) => {
-  const DAYS = [
-    { name: "Monday", id: 1 },
-    { name: "Tuesday", id: 2 },
-    { name: "Wednesday", id: 3 },
-    { name: "Thursday", id: 4 },
-    { name: "Friday", id: 5 },
-    { name: "Saturday", id: 6 },
-    { name: "Sunday", id: 7 },
-  ];
+  const nextSevenDays = [];
+  for (let i = 0; i < 7; i++) {
+    nextSevenDays.push({
+      date: moment().add(i, "days").format("dddd, D MMMM YYYY"),
+      events: [],
+    });
+  }
+
+  console.log("init", nextSevenDays);
+
+  nextSevenDays.forEach((day) => {
+    cardData.forEach((card) => {
+      if (card.date.isSame(day.date, "day")) {
+        day.events.push(card);
+      }
+    });
+  });
+
   return (
     <div>
       <div
@@ -28,8 +38,8 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
       >
         {showHome ? (
           <div>
-            {DAYS.map((day) => (
-              <DayContainer day={day.name} id={day.id} cardData={cardData} />
+            {nextSevenDays.map((day) => (
+              <DayContainer day={day.date} id={day.id} cardData={day.events} />
             ))}
           </div>
         ) : (

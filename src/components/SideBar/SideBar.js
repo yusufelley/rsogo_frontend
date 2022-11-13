@@ -1,6 +1,6 @@
 import { AiFillHome } from "react-icons/ai";
 import "../../App.css";
-import React from "react";
+import React, { useState } from "react";
 import "./SideBar";
 import { CreateEventScreen } from "../../screens/CreateEventScreen";
 import { CreateButton } from "../CreateButton";
@@ -14,66 +14,58 @@ const SideBar = (props) => {
 
     const rsoData = props.rsoData;
 
-    const showHome =  props.showHome
-    const setShowHome = props.setShowHome
+    const showHome =  props.showHome;
+    const setShowHome = props.setShowHome;
     const currCard = props.currCard;
     const setCard = props.setCard;
     const showCreateEvent = props.showCreateEvent;
     const setShowCreateEvent = props.setShowCreateEvent;
     const toggleCreateEvent = props.toggleCreateEvent;
 
+    const [touched, setTouched] = useState(false);
+    const className = touched ? {touchedButton} : {dynamicButton};
 
+    const toggleTouched = () => {
+        setTouched( prevState => !prevState.touched);
+        className = {touchedButton}
+    }
 
-  // state = {
-  //     touched: false
-  // }
-
-  // const toggleTouched = () => {
-  //     this.setState( prevState => ({
-  //         touched: !prevState.touched
-  //     }));
-  // }
-
-  // const handleMouseUp = () => {
-  //     // Handle smooth animation when clicking without holding
-  //     setTimeout( () => {
-  //         this.setState({ touched: false });
-  //     }, 150);
-  // }
+    const handleMouseUp = () => {
+        // Handle smooth animation when clicking without holding
+        setTimeout( () => {
+            setTouched(false);
+            className = {dynamicButton}
+        }, 150);
+    }
     const homeClick = () => {
         setShowHome(true);
         return (
-            <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
-                {showCreateEvent ? (
-                    <CreateEventScreen toggleCreateEvent={toggleCreateEvent} />
-                ) : (
-                    <>
-                    <CreateButton handleClick={toggleCreateEvent} />
-            </>
-        )}
-      <SideBar rsoData={rsoData} />
-      {showHome ? <Home /> : <OneRSO currCard = {currCard} setCard = {setCard}/>}
-    </div>
-            
+          <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
+            {showCreateEvent ? (<CreateEventScreen toggleCreateEvent={toggleCreateEvent} />) : 
+                              (<> <CreateButton handleClick={toggleCreateEvent} /> </>)
+            }
+            <SideBar rsoData={rsoData} />
+            {showHome ? <Home /> : <OneRSO currCard = {currCard} setCard = {setCard}/>}
+          </div>
         )
     }
-  return (
+  
+    return (
     <div style={sidebarStyle}>
-      {/* {/* <button style = {homeButton}>
-                <AiFillHome style = {iconStyle}/>
-            </button> */}
+   
       <button style={homeButton} onClick = {homeClick}>
         <AiFillHome style={iconStyle} />
       </button>
-
+      
       {/* <button
-                className={className}
-                onMouseDown={this.toggleTouched}
-                onMouseUp={this.handleMouseUp}
-                >
-                <AiFillHome style = {iconStyle}/>
-                
-            </button> */}
+        onClick = {homeClick}
+        style = {className}
+        onMouseDown={toggleTouched}
+        onMouseUp={handleMouseUp}
+        >
+        <AiFillHome style = {iconStyle}/>     
+      </button> */}
+
       <hr
         style={{
           background: "white",
@@ -106,6 +98,7 @@ const sidebarStyle = {
 const iconStyle = {
   height: "4vh",
   width: "11vw",
+  color: "white"
 };
 
 const homeButton = {
@@ -116,5 +109,30 @@ const homeButton = {
   backgroundColor: PRIMARY_COLOR,
   borderColor: "transparent",
 };
+
+const dynamicButton = {
+  height: "6vh",
+  width: "15vw",
+  marginTop: "100vh",
+  borderColor: "transparent",
+  background: PRIMARY_COLOR,
+  cursor: "pointer",
+  color: "white",
+  iconColor: "white",
+
+  opacity: "1",
+  transition: "opacity 300ms ease"
+}
+
+const touchedButton = {
+  marginTop: "100vh",
+  background: PRIMARY_COLOR,
+  cursor: "pointer",
+  height: "6vh",
+  width: "15vw",
+  color: "white",
+
+  opacity: "0.5"
+}
 
 export default SideBar;
