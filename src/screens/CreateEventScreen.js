@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import moment from "moment";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-//import axios from "axios";
+import axios from "axios";
 
 const FormTextBox = ({ handleTextChange, label, propName, multiline }) => {
   return (
@@ -40,6 +40,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
   };
   const [dateTimeMoment, setDateTimeMoment] = useState(moment());
   const [eventDetails, setEventDetails] = useState(initialEventDetails);
+  const [image,setImage] = useState('');
 
   const handleDateTimeChange = (dateTime) => {
     setDateTimeMoment(dateTime);
@@ -53,6 +54,22 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
     console.log("text: ", event.target.value);
     setEventDetails((prev) => ({ ...prev, [propName]: event.target.value }));
   };
+
+  const handleImage = (e) => {
+    console.log(e.target.files[0])
+    setEventDetails((prev) => ({...prev, image: e.target.files[0]}))
+    const formData = new FormData()
+    formData.append('image',image)
+    setEventDetails((prev) => ({...prev, image: formData}))
+  }
+
+  // const handleAPI = () => {
+  //   const formData = new FormData()
+  //   formData.append('image',image)
+  //   axios.post('http://localhost:3001/CreateEvent',formData).then((res) => {
+  //     console.log(res)
+  //   })
+  // }
 
   console.log("Event Details:", eventDetails);
 
@@ -77,7 +94,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
           style={{
             backgroundColor: "#EEE",
             display: "flex",
-            height: "50vh",
+            height: "58vh",
             width: "80vw",
             borderRadius: "1rem",
             flexDirection: "column",
@@ -120,6 +137,10 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
             handleTextChange={handleTextChange}
             multiline
           />
+          <div style={{alignSelf:"center",width:"230px",padding:"10px"}}>
+            <input type="file" name="file" onChange={handleImage}></input>
+          </div>
+
           <div
             style={{
               display: "flex",
@@ -145,7 +166,7 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
                   headers: {
                     "Content-Type": "application/json",
                   },
-                  body: JSON.stringify(eventDetials),
+                  body: JSON.stringify(eventDetails),
                 });
               }}
               style={{ marginTop: "1rem" }}
