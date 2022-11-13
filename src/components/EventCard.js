@@ -25,6 +25,7 @@ function EventCard({
     <div className="event-card" onClick={onClick}>
       <div className="card-back" onClick={() => handleClick()}>
         <div style={title}>Event Details:</div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac quam at justo imperdiet rutrum. Etiam eget ornare mi, ut accumsan arcu. Nam dictum purus a ante euismod placerat. Cras tempus varius purus, sed dictum sapien semper sit amet. Maecenas cursus neque eu suscipit mollis. Cras tempor sem id elit tristique, at aliquam libero dignissim. 
         <div></div>
       </div>
       <div className="card-front">

@@ -146,11 +146,6 @@ export const CreateEventScreen = ({ toggleCreateEvent }) => {
             handleTextChange={handleTextChange}
           />
 
-          <FormTextBox
-            label="Image URL"
-            propName="image"
-            handleTextChange={handleTextChange}
-          />
 
           <FormTextBox
             label="Details"

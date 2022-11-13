@@ -20,56 +20,56 @@ export const Home = (props) => {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Today",
+      text: "Welcome Back!",
       date: moment({ year: 2022, month: 10, day: 13, hour: 15, minute: 10 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Tomorrow",
+      text: "Sunrise Hike",
       date: moment({ year: 2022, month: 10, day: 14, hour: 12, minute: 10 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Tuesday",
-      date: moment({ year: 2022, month: 10, day: 15, hour: 1, minute: 10 }),
+      text: "Jelly Fishing",
+      date: moment({ year: 2022, month: 10, day: 14, hour: 1, minute: 10 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Wednesday",
+      text: "Apple Picking",
       date: moment({ year: 2022, month: 10, day: 16, hour: 15, minute: 10 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Thursday",
+      text: "Movie Night",
       date: moment({ year: 2022, month: 10, day: 17, hour: 15, minute: 10 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Friday",
-      date: moment({ year: 2022, month: 10, day: 18, hour: 15, minute: 0 }),
+      text: "Go Karting",
+      date: moment({ year: 2022, month: 10, day: 17, hour: 15, minute: 0 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Saturday",
+      text: "Paint Balling",
       date: moment({ year: 2022, month: 10, day: 19, hour: 15, minute: 0 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Sunday",
+      text: "Six Flags",
       date: moment({ year: 2022, month: 10, day: 20, hour: 15, minute: 0 }),
     },
     {
@@ -89,3 +89,4 @@ export const Home = (props) => {
     </div>
   );
 };
+
