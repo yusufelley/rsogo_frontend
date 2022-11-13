@@ -6,64 +6,67 @@ import msa from "../assets/msa.png";
 import "./Home.css";
 
 export const Home = (props) => {
-  const cards = [
-    {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
-    },
-    {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
-    },
-    {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
-    },
-    {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
-    },
-    {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
-    },
-    {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "sun",
-    },
-    {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "sun",
-    },
-  ];
+    const currCard = props.currCard;
+    const setCard = props.setCard;
+
+    const cards = [
+        {
+        bg: "danger",
+        txtColor: "white",
+        img: msa,
+        text: "MSA Welcome Back",
+        time: "10:00pm",
+        day: "mon",
+        },
+        {
+        bg: "danger",
+        txtColor: "white",
+        img: msa,
+        text: "MSA Welcome Back",
+        time: "10:00pm",
+        day: "mon",
+        },
+        {
+        bg: "danger",
+        txtColor: "white",
+        img: msa,
+        text: "MSA Welcome Back",
+        time: "10:00pm",
+        day: "mon",
+        },
+        {
+        bg: "danger",
+        txtColor: "white",
+        img: msa,
+        text: "MSA Welcome Back",
+        time: "10:00pm",
+        day: "mon",
+        },
+        {
+        bg: "danger",
+        txtColor: "white",
+        img: msa,
+        text: "MSA Welcome Back",
+        time: "10:00pm",
+        day: "mon",
+        },
+        {
+        bg: "danger",
+        txtColor: "white",
+        img: msa,
+        text: "MSA Welcome Back",
+        time: "10:00pm",
+        day: "sun",
+        },
+        {
+        bg: "danger",
+        txtColor: "white",
+        img: msa,
+        text: "MSA Welcome Back",
+        time: "10:00pm",
+        day: "sun",
+        },
+    ];
   return (
     <div
       className="main-container"
