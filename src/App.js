@@ -15,7 +15,7 @@ import { CreateButton } from "./components/CreateButton";
 import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
-  const [showHome, setShowHome] = useState(true);
+  const [showHome, setShowHome] = useState(false);
   const [showCreateEvent, setShowCreateEvent] = useState(false);
   const [currCard, setCard] = useState(null);
 
