@@ -15,7 +15,7 @@ function EventCard({
   titleText,
   time,
   date,
-  locaiton,
+  location,
   onClick,
   handleClick,
 }) {
