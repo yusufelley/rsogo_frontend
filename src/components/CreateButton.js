@@ -2,7 +2,7 @@ import { height } from "@mui/system";
 import React from "react";
 import { IoIosAdd } from "react-icons/io";
 import { PRIMARY_COLOR } from "../configs/colors";
-export const CreateButton = () => {
+export const CreateButton = ({ handleClick }) => {
   return (
     <button
       className="shadow"
@@ -20,6 +20,7 @@ export const CreateButton = () => {
         alignItems: "center",
         justifyContent: "center",
       }}
+      onClick={() => handleClick()}
     >
       <IoIosAdd size={60} color="white" />
     </button>
