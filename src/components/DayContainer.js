@@ -15,7 +15,15 @@ export const DayContainer = ({ day, cardData, id }) => {
     return;
   }
   return (
-    <div class="day" style={{ marginBottom: "80px" }}>
+    <div
+      class="day"
+      style={{
+        marginBottom: "50px",
+        fontFamily: "Montserrat",
+        fontWeight: "700",
+        fontSize: "24px",
+      }}
+    >
       {`${day} - ${moment().add(id, "days").format("MM/DD/YYYY")}`}
       {filteredCards.map((card) => (
         <div style={{ marginBottom: "20px" }}>
