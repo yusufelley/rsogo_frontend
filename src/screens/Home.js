@@ -9,6 +9,7 @@ import hockey from "../assets/umass-hockey.jpg";
 import acm from "../assets/umass-acm.png";
 import archery from "../assets/umass-archery.jpg";
 
+import logo from "../assets/RSOlogo.png";
 import "./Home.css";
 import moment from "moment";
 import { WHITE_COLOR } from "../configs/colors";
@@ -26,43 +27,50 @@ export const Home = (props) => {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Yesterday",
-      date: moment({ year: 2022, month: 10, day: 12, hour: 18, minute: 0 }),
-    },
-    {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "Welcome Back!",
+      text: "Game Night",
       date: moment({ year: 2022, month: 10, day: 13, hour: 15, minute: 10 }),
     },
     {
+      bg: "success",
+      txtColor: "white",
+      img: smash,
+      text: "Charity Tournament!",
+      date: moment({ year: 2022, month: 10, day: 14, hour: 15, minute: 10 }),
+    },
+    {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Sunrise Hike",
+      text: "Iftar",
       date: moment({ year: 2022, month: 10, day: 14, hour: 12, minute: 10 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Jelly Fishing",
+      text: "Senior Weekend",
       date: moment({ year: 2022, month: 10, day: 14, hour: 1, minute: 10 }),
     },
     {
-      bg: "danger",
-      txtColor: "white",
-      img: msa,
-      text: "Apple Picking",
-      date: moment({ year: 2022, month: 10, day: 16, hour: 15, minute: 10 }),
+      bg: "warning",
+      txtColor: "black",
+      img: acm,
+      text: "Advanced ML!",
+      date: moment({ year: 2022, month: 10, day: 14, hour: 16, minute: 30 }),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
-      text: "Movie Night",
-      date: moment({ year: 2022, month: 10, day: 17, hour: 15, minute: 10 }),
+      text: "Welcome Back",
+      date: moment({ year: 2022, month: 10, day: 16, hour: 15, minute: 10 }),
+    },
+    {
+      bg: "info",
+      txtColor: "white",
+      img: archery,
+      text: "Shooting practice",
+      date: moment({ year: 2022, month: 10, day: 16, hour: 17, minute: 20 }),
     },
     {
       bg: "danger",
@@ -75,8 +83,22 @@ export const Home = (props) => {
       bg: "danger",
       txtColor: "white",
       img: msa,
+      text: "Movie Night",
+      date: moment({ year: 2022, month: 10, day: 17, hour: 16, minute: 10 }),
+    },
+    {
+      bg: "warning",
+      txtColor: "white",
+      img: acm,
+      text: "Prod. Mgmt. intro!",
+      date: moment({ year: 2022, month: 10, day: 17, hour: 19, minute: 20 }),
+    },
+    {
+      bg: "danger",
+      txtColor: "white",
+      img: msa,
       text: "Paint Balling",
-      date: moment({ year: 2022, month: 10, day: 19, hour: 15, minute: 0 }),
+      date: moment({ year: 2022, month: 10, day: 18, hour: 15, minute: 0 }),
     },
     {
       bg: "danger",
@@ -98,8 +120,15 @@ export const Home = (props) => {
       className="main-container"
       style={{ display: "inline-block", backgroundColor: WHITE_COLOR }}
     >
+      <div
+        className="App"
+        style={{ backgroundColor: "#c0c6d0", display: "flex", flexDirection:"column" }}
+      >
+      <div className="club-name-header" style={{ fontFamily: "monospace" }}>
+        <img src={logo} alt="logo" style={{width:"70vw", height:"70px", position:"relative", right: 20, top: 5}}/>
+      </div>
       <ScrollingContainer showHome cardData={cards}></ScrollingContainer>
+      </div>
     </div>
   );
 };
-
