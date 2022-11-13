@@ -85,8 +85,15 @@ export const Home = (props) => {
       className="main-container"
       style={{ display: "inline-block", backgroundColor: WHITE_COLOR }}
     >
+      <div
+        className="App"
+        style={{ backgroundColor: "#c0c6d0", display: "flex", flexDirection:"column" }}
+      >
+      <div className="club-name-header" style={{ fontFamily: "monospace" }}>
+        RSO GO
+      </div>
       <ScrollingContainer showHome cardData={cards}></ScrollingContainer>
+      </div>
     </div>
   );
 };
-
