@@ -2,6 +2,7 @@ import React from "react";
 import EventCard from "./EventCard";
 import HomeCard from "./HomeCard/HomeCard";
 import { useState } from "react";
+import FlippableCard from "./FlippableCard";
 
 export const ScrollingContainer = ({ cardData, showHome }) => {
   console.log(cardData);
@@ -22,13 +23,13 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
               <HomeCard
                 bg={card.bg}
                 txtColor={card.txtColor}
-                img={card.img}
+                img={card.image}
                 text={card.text}
                 time={card.time}
               />
             ) : (
-              <EventCard
-                img={card.img}
+              <FlippableCard
+                img={card.image}
                 title={card.text}
                 time={card.time}
                 date={card.date}

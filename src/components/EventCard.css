@@ -1,0 +1,37 @@
+.event-card {
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+    left: 5vw;
+    top: 5vh;
+    width: 70vw;
+    height: 52vh;
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.card-back,.card-front{
+    /* sizing */
+    height: 100%;
+    width: 100%;
+
+    -webkit-backface-visibility: hidden;
+    /* backface-visibility: hidden;     */
+
+    border-radius: 15px;
+    padding: 10px;
+    right: 1vw;
+    bottom: 1vw;
+    position: absolute;
+}
+
+.card-front{
+    background: white;
+}
+.card-back{
+    background: white;
+    transform: rotateY(180deg);
+}
