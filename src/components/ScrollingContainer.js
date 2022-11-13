@@ -3,8 +3,18 @@ import EventCard from "./EventCard";
 import HomeCard from "./HomeCard/HomeCard";
 import { useState } from "react";
 import FlippableCard from "./FlippableCard";
+import { DayContainer } from "./DayContainer";
 
 export const ScrollingContainer = ({ cardData, showHome }) => {
+  const DAYS = [
+    { name: "Monday", id: 1 },
+    { name: "Tuesday", id: 2 },
+    { name: "Wednesday", id: 3 },
+    { name: "Thursday", id: 4 },
+    { name: "Friday", id: 5 },
+    { name: "Saturday", id: 6 },
+    { name: "Sunday", id: 7 },
+  ];
   return (
     <div>
       <div
@@ -18,125 +28,9 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
       >
         {showHome ? (
           <div>
-            {cardData.filter((card) => card.day === "mon").length > 0 ? (
-            <div class="day" style={{ marginBottom: "80px" }}>
-              Mon
-              {cardData
-                .filter((card) => card.day === "mon")
-                .map((card) => (
-                  <div style={{ marginBottom: "20px" }}>
-                    <HomeCard
-                      bg={card.bg}
-                      txtColor={card.txtColor}
-                      img={card.img}
-                      text={card.text}
-                      time={card.time}
-                    />
-                  </div>
-                ))}
-            </div>) : (null) }
-            {cardData.filter((card) => card.day === "tue").length > 0 ? (
-            <div class="day" style={{ marginBottom: "80px" }}>
-              Tue
-              {cardData
-                .filter((card) => card.day === "tue")
-                .map((card) => (
-                  <div style={{ marginBottom: "20px" }}>
-                    <HomeCard
-                      bg={card.bg}
-                      txtColor={card.txtColor}
-                      img={card.image}
-                      text={card.text}
-                      time={card.time}
-                    />
-                  </div>
-                ))}
-            </div>) : (null) }
-            {cardData.filter((card) => card.day === "wed").length > 0 ? (
-            <div class="day" style={{ marginBottom: "80px" }}>
-              Wed
-              {cardData
-                .filter((card) => card.day === "wed")
-                .map((card) => (
-                  <div style={{ marginBottom: "20px" }}>
-                    <HomeCard
-                      bg={card.bg}
-                      txtColor={card.txtColor}
-                      img={card.img}
-                      text={card.text}
-                      time={card.time}
-                    />
-                  </div>
-                ))}
-            </div>) : (null) }
-            {cardData.filter((card) => card.day === "thur").length > 0 ? (
-            <div class="day" style={{ marginBottom: "80px" }}>
-              Thur
-              {cardData
-                .filter((card) => card.day === "thur")
-                .map((card) => (
-                  <div style={{ marginBottom: "20px" }}>
-                    <HomeCard
-                      bg={card.bg}
-                      txtColor={card.txtColor}
-                      img={card.img}
-                      text={card.text}
-                      time={card.time}
-                    />
-                  </div>
-                ))}
-            </div>) : (null) }
-            {cardData.filter((card) => card.day === "fri").length > 0 ? (
-            <div class="day" style={{ marginBottom: "80px" }}>
-              Fri
-              {cardData
-                .filter((card) => card.day === "fri")
-                .map((card) => (
-                  <div style={{ marginBottom: "20px" }}>
-                    <HomeCard
-                      bg={card.bg}
-                      txtColor={card.txtColor}
-                      img={card.img}
-                      text={card.text}
-                      time={card.time}
-                    />
-                  </div>
-                ))}
-            </div>) : (null) }
-            {cardData.filter((card) => card.day === "sat").length > 0 ? (
-            <div class="day" style={{ marginBottom: "80px" }}>
-              Sat
-              {cardData
-                .filter((card) => card.day === "sat")
-                .map((card) => (
-                  <div style={{ marginBottom: "20px" }}>
-                    <HomeCard
-                      bg={card.bg}
-                      txtColor={card.txtColor}
-                      img={card.img}
-                      text={card.text}
-                      time={card.time}
-                    />
-                  </div>
-                ))}
-            </div>) : (null) }
-            {cardData.filter((card) => card.day === "sun").length > 0 ? (
-            <div class="day" style={{ marginBottom: "80px" }}>
-              Sun
-              {cardData
-                .filter((card) => card.day === "sun")
-                .map((card) => (
-                  <div style={{ marginBottom: "20px" }}>
-                    <HomeCard
-                      bg={card.bg}
-                      txtColor={card.txtColor}
-                      img={card.img}
-                      text={card.text}
-                      time={card.time}
-                    />
-                  </div>
-                ))}
-            </div>) : (null) }
+            {DAYS.map((day) => (
+              <DayContainer day={day.name} id={day.id} cardData={cardData} />
+            ))}
           </div>
         ) : (
           cardData.map((card) => (
@@ -152,28 +46,6 @@ export const ScrollingContainer = ({ cardData, showHome }) => {
           ))
         )}
       </div>
-
-      {/*cardData.map((card) => (
-          <div style={{ marginBottom: "20px" }}>
-            {showHome ? (
-              <HomeCard
-                bg={card.bg}
-                txtColor={card.txtColor}
-                img={card.image}
-                text={card.text}
-                time={card.time}
-              />
-            ) : (
-              <FlippableCard
-                img={card.image}
-                title={card.text}
-                time={card.time}
-                date={card.date}
-                location={card.location}
-              />
-            )}
-          </div>
-            ))}*/}
     </div>
   );
 };

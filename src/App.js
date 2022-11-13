@@ -15,8 +15,10 @@ import { CreateButton } from "./components/CreateButton";
 import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
-  const [showHome, setShowHome] = useState(false);
+  const [showHome, setShowHome] = useState(true);
   const [showCreateEvent, setShowCreateEvent] = useState(false);
+  const [currCard, setCard] = useState(null);
+
 
   const toggleCreateEvent = () => {
     setShowCreateEvent((prev) => !prev);
@@ -39,8 +41,16 @@ function App() {
           <CreateButton handleClick={toggleCreateEvent} />
         </>
       )}
-      <SideBar rsoData={RSOs} />
-      {showHome ? <Home /> : <OneRSO />}
+      <SideBar rsoData={RSOs} 
+        showHome = {showHome}
+        setShowHome = {setShowHome}
+        currCard = {currCard}
+        setCard = {setCard}
+        showCreateEvent = {showCreateEvent}
+        setShowCreateEvent = {setShowCreateEvent}
+        toggleCreateEvent = {toggleCreateEvent}
+      />
+      {showHome ? <Home /> : <OneRSO currCard = {currCard} setCard = {setCard}/>}
     </div>
   );
 }
