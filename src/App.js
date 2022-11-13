@@ -12,7 +12,7 @@ import React, { useState } from "react";
 import OneRSO from "./screens/OneRSO";
 
 function App() {
-  const [showHome, setShowHome] = useState(false);
+  const [showHome, setShowHome] = useState(true);
   return (
     <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
       <SideBar />
