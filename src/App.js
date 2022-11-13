@@ -13,7 +13,7 @@ import OneRSO from "./screens/OneRSO";
 import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
-  const [showHome, setShowHome] = useState(false);
+  const [showHome, setShowHome] = useState(true);
   return (
     <div className="App" style={{ backgroundColor: "blue", display: "flex" }}>
       {/* <SideBar />
