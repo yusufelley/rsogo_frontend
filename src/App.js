@@ -30,11 +30,10 @@ function App() {
   };
   const RSOs = [
     { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
-    { img: msa },
+    { img: smash },
+    { img: acm },
+    { img: hockey },
+    { img: archery }
   ];
   console.log(showCreateEvent);
   return (

@@ -1,4 +1,4 @@
-.button {
+/* .button {
     margin-top: 1vh;
     background: maroon;
     padding: 10px 15px;
@@ -11,7 +11,7 @@
 
     opacity: 1;
     transition: opacity 300ms ease;
-  }
+  } */
   
   .touched {
     opacity: 0.5;
