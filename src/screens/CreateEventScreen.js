@@ -30,6 +30,7 @@ const FormTextBox = ({ handleTextChange, label, propName, multiline }) => {
 
 export const CreateEventScreen = ({ toggleCreateEvent }) => {
   const initialEventDetails = {
+    rso: undefined,
     name: undefined,
     date: undefined,
     time: undefined,
