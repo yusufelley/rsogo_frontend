@@ -4,6 +4,7 @@ import { ScrollingContainer } from "../components/ScrollingContainer";
 import SideBar from "../components/SideBar/SideBar";
 import msa from "../assets/msa.png";
 import "./Home.css";
+import moment from "moment";
 
 export const Home = (props) => {
   const cards = [
@@ -12,56 +13,49 @@ export const Home = (props) => {
       txtColor: "white",
       img: msa,
       text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
+      date: moment("11/14/2022"),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
       text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
+      date: moment("11/16/2022"),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
       text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
+      date: moment("11/16/2022"),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
       text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
+      date: moment("11/18/2022"),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
       text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "mon",
+      date: moment("11/19/2022"),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
       text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "sun",
+      date: moment("11/14/2022"),
     },
     {
       bg: "danger",
       txtColor: "white",
       img: msa,
       text: "MSA Welcome Back",
-      time: "10:00pm",
-      day: "sun",
+      date: moment("11/14/2022"),
     },
   ];
   return (

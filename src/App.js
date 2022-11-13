@@ -15,7 +15,7 @@ import { CreateButton } from "./components/CreateButton";
 import { CreateEventScreen } from "./screens/CreateEventScreen";
 
 function App() {
-  const [showHome, setShowHome] = useState(false);
+  const [showHome, setShowHome] = useState(true);
   const [showCreateEvent, setShowCreateEvent] = useState(false);
 
   const toggleCreateEvent = () => {
